@@ -1,0 +1,19 @@
+- name: Install dependencies and run a custom module
+  hosts: all
+  become: true
+  tasks:
+    - name: Ensure Python3 is installed
+      ansible.builtin.package:
+        name: python3
+        state: present
+
+    - name: Ensure pip is installed
+      ansible.builtin.package:
+        name: python3-pip
+        state: present
+
+    - name: Install inotify-simple package
+      ansible.builtin.pip:
+        name: inotify-simple
+        state: present
+        executable: pip3
