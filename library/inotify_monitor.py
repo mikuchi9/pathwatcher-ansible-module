@@ -29,8 +29,7 @@ options:
         description: Path(s) to monitor. Multiple paths should be comma-separated, e.g., /path/to/dir1,/path/to/dir2
         required: true
         type: str
-    stimeout:
-    mtimeout:
+    stimeout, mtimeout:
         description:
             - Sets the time limit while the path(s) is/are monitored.
             - `stimeout` specifies the time limit in seconds, while `mtimelimit` specifies the time limit in minutes.
